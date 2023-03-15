@@ -39,7 +39,7 @@ namespace TicTacToe
             foreach (Control button in current.Controls)
             {
                 button.Enabled = true;
-                button.Text = "";
+                button.Text = "_";
                 button.BackColor = Color.White;
             }
         }
@@ -53,7 +53,7 @@ namespace TicTacToe
                     var button = new Button();
                     button.Location = new Point(j * _cellSize, i * _cellSize + _menuHeight);
                     button.Size = new Size(_cellSize, _cellSize);
-                    button.Text = "-";
+                    button.Text = "_";
                     button.BackColor = Color.White;
                     button.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Bold, GraphicsUnit.Point);
                     current.Controls.Add(button);
@@ -105,7 +105,7 @@ namespace TicTacToe
         {
             foreach (Control button in current.Controls)
             {
-                if (button.Text.Contains("-"))
+                if (button.Text.Contains("_"))
                     button.Enabled = false; 
             }
         }
